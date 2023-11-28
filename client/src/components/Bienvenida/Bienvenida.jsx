@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./Bienvenida.module.css";
 import { Link } from "react-router-dom";
-import intro from "../../assets/videos/intro.mp4";
 import auto1Image from "../../assets/random_img/auto1.png";
 import auto2Image from "../../assets/random_img/auto1.png";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +38,7 @@ export default function Bienvenida() {
                 muted
                 onEnded={handleVideoEnded}
               >
-                <source src={intro} type="video/mp4" />
+                <source src="https://storage.cloud.google.com/video_f1/intro.mp4" type="video/mp4" />
                 Tu navegador no soporta la reproducción de video.
               </video>
               <div className={style.fondoBoton}>
