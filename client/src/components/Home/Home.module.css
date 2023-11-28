@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 80%;
+    background-image: url("../../assets/wallpaper/init.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "formula1";
+    src: url(../../assets/fonts/Formula.ttf)
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.titulo{
+    height: 20%;
+    width: 20%;
+    margin-top: -5%;
+    margin-bottom: -5%;
+}
+
+.subtitulos{
+    font-family: "formula1", fantasy;
+    color: white;
+    text-shadow: 0px 0px 10px red;
+    font-size: 300%;
+    margin-bottom: 2%;    
+}
+
+.texto2{
+    font-size: 130%;
+    font-weight:bolder;
+}

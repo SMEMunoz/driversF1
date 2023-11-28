@@ -1,0 +1,123 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url("../../assets/wallpaper/init.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: aliceblue;
+    gap: 10%;
+}
+
+
+
+
+.conteinerImagen{
+    flex-direction: column;
+    height: 80%;
+    width: 20%;
+}
+
+.imagen{
+    align-items: flex-start;
+    height: 30%;
+    width: 100%;
+    border-radius: 500px;}
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    height: 80%;
+    width: 100%;
+    gap: 10%;}
+
+.titulo{
+    height: 5%;
+    font-size: 200%;}
+
+.texto{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 150%;
+    gap: 5%;
+}
+
+.lista{display: flex;
+    flex-direction: column;
+    text-align:justify;
+    justify-content: center;
+    margin-left: 10%;
+    height: 70%;
+    width: 90%;
+    font-weight: bolder;
+    justify-content: center;
+    gap: 5%
+}
+
+.contacto{
+    height: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    font-size: 150%;
+    font-weight: bolder;
+    text-shadow: 0px 0px 20px rgb(0, 191, 255);
+}
+
+@media (max-width: 950px ){
+    .lista{font-size: 80%;
+    }
+    
+    .contacto{
+        gap: 5%;
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 620px ){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        gap: 2%;
+    }
+    .conteinerImagen{
+        flex-direction: column;
+        height: 10%;
+        width: 100%;
+    }
+    .imagen{
+        align-items: flex-start;
+        height: 100%;
+        width: 20%;
+        border-radius: 500px;}
+        
+    .textos{
+        margin-right: 0;}
+
+    .texto{
+        font-size: 130%;
+        gap: 10%;
+    }
+
+    .contacto{
+        gap: 0;
+        font-size: 100%;
+    }
+}

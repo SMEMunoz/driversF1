@@ -1,0 +1,441 @@
+a:visited {
+    color: red;
+  }
+
+.pageContainer {
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+@font-face {
+    font-family: "formula1";
+    src: url(../../assets/fonts/Formula.ttf);
+}
+
+@keyframes titulo {
+    0% {
+      opacity: 0;;
+    }
+    100% {
+      opacity: 1;;
+    }
+  }
+  
+@keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 0px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+      text-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 0px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+  }
+
+  @keyframes appearAndNeon {
+    0% {
+      opacity: 0;
+      text-shadow: 0 0 0px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 0px rgba(255, 0, 0, 0.8);
+    }
+  }
+
+@keyframes subEnlaces {
+    0% {
+      opacity: 0;
+      text-shadow: 0 0 0px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.titulo{
+    font-family: "formula1", fantasy;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 15px red;
+    font-size: 1300%;
+    z-index: 0;
+    opacity: 0;
+    animation: appearAndNeon 2s 2s linear forwards, neonGlow 2s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes moveArrows {
+    0%, 100% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveArrowsHover {
+    0%, 100% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveArrowsHover2 {
+    0%, 100% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: "stardew";
+    src: url(../../assets/fonts/Stardew.ttf);
+}
+
+.subOpciones{
+    font-family: "stardew", fantasy;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 30%;
+    z-index: 1;
+    font-weight: bolder;
+    margin-top: 2%;
+    text-decoration: none;
+    color: red;
+    animation: appearAndNeon 2s 3s linear forwards;
+}
+
+.ingreso{
+    opacity: 0;
+    animation: subEnlaces 2s 3s linear forwards;
+}
+
+.registro{
+    opacity: 0;
+    animation: subEnlaces 2s 3s linear forwards;
+    }
+
+.login{
+    opacity: 0;
+    animation: subEnlaces 2s 3s linear forwards}
+
+.enlaceMenu {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    }
+      
+      /* Pseudo-elemento para la flecha izquierda */
+.enlaceMenu::before {
+    content: "\2192"; /* Código unicode para una flecha hacia la izquierda */
+    position: absolute;
+    margin-top: -4%;
+    left: -40%;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    }
+      
+      /* Pseudo-elemento para la flecha derecha */
+.enlaceMenu::after {
+    content: "\2190"; /* Código unicode para una flecha hacia la derecha */
+    position: absolute;
+    margin-top: -4%;
+    right: -40%;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    }
+      
+      /* Efecto hover para mostrar las flechas */
+.enlaceMenu:hover::before{opacity: 1;
+    margin-top: -4%;
+    transform: translateX(0);
+    animation: moveArrowsHover2 1s linear infinite;}
+
+.enlaceMenu:hover::after {
+    margin-top: -4%;
+    opacity: 1;
+    transform: translateX(0);
+    animation: moveArrowsHover 1s linear infinite;
+    }
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* El video se posicionará de manera absoluta */
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 80%; /* 100% ancho / 16:9 = 56.25% alto */
+    max-height: 100%; /* Opcional: ocupa todo el alto del contenedor */
+    z-index: 0; /* Asegura que el video esté por encima de otros elementos */
+  }
+
+.fondoBoton{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0) 80%, black 100%); 
+    z-index: 1; }
+
+.saltar{
+    font-size: 150%;
+    font-family: "formula1", fantasy;
+    position: absolute;
+    z-index: 1;}
+
+@keyframes moveAuto {
+    0% {
+      transform: translateX(-800%);
+    }
+    100% {
+      transform: translateX(1000%);
+    }
+  }
+
+@keyframes lights {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+.lights {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 2px; /* Ajusta la altura de las luces según tus preferencias */
+    transform: translateX(-200%);
+    background: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.8) 0%,
+      transparent 20%,
+      transparent 80%,
+      rgba(255, 0, 0, 0.8) 100%
+    );
+    animation: lights 1s linear ; /* Ajusta la duración de la animación según tus preferencias */
+  }
+
+.lights1 {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    height: 2px; /* Ajusta la altura de las luces según tus preferencias */
+    transform: translateX(-200%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 255, 51, 0.8) 0%,
+      transparent 20%,
+      transparent 80%,
+      rgba(0, 255, 51, 0.8) 100%
+    );
+    animation: lights 2s 1s linear forward; /* Ajusta la duración de la animación según tus preferencias */
+  }
+
+.lights2 {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    height: 2px; /* Ajusta la altura de las luces según tus preferencias */
+    transform: translateX(-200%);
+    background: linear-gradient(
+      to right,
+      rgba(38, 0, 255, 0.8) 0%,
+      transparent 20%,
+      transparent 80%,
+      rgba(38, 0, 255, 0.8) 100%
+    );
+    animation: lights 1s 2s linear ; /* Ajusta la duración de la animación según tus preferencias */
+  }
+
+.lights3 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px; /* Ajusta la altura de las luces según tus preferencias */
+    transform: translateX(-200%);
+    background: linear-gradient(
+      to right,
+      rgba(255, 0, 183, 0.8) 0%,
+      transparent 20%,
+      transparent 80%,
+      rgba(255, 0, 183, 0.8) 100%
+    );
+    animation: lights 2s 1s linear; /* Ajusta la duración de la animación según tus preferencias */
+  }
+
+.auto {
+    position: absolute;
+    top: 50%;
+    width: 150px; /* Ajusta el tamaño de acuerdo a tus imágenes */
+    transform: translateX(-800%);
+    height: auto;
+    animation: moveAuto 4s ease-in-out backwards; /* Ajusta la duración y el tipo de animación según tus necesidades */
+  }
+  
+.auto2 {
+    position: absolute;
+    top: 50%;
+    width: 150px; /* Ajusta el tamaño de acuerdo a tus imágenes */
+    height: auto;
+    transform: translateX(-800%);
+    animation: moveAuto 1s 1s ease-in-out backwards;
+     /* Ajusta la duración y el tipo de animación según tus necesidades */
+  }
+
+.auto3 {
+    position: absolute;
+    top: 50%;
+    width: 150px; /* Ajusta el tamaño de acuerdo a tus imágenes */
+    height: auto;
+    transform: translateX(-800%);
+    animation: moveAuto 2s 1s ease-in-out backwards;
+     /* Ajusta la duración y el tipo de animación según tus necesidades */
+  }
+
+.auto4 {
+    position: absolute;
+    top: 50%;
+    width: 150px; /* Ajusta el tamaño de acuerdo a tus imágenes */
+    height: auto;
+    transform: translateX(-800%);
+    animation: moveAuto 1s 2s ease-in-out backwards;
+     /* Ajusta la duración y el tipo de animación según tus necesidades */
+  }
+
+.footer{
+    font-size: 150%;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .titulo{
+        font-size: 1000%;
+    }
+    .footer{
+        height: 50%;
+        
+    }
+}
+
+@media (max-width: 850px) {
+    .titulo{
+        font-size: 800%;
+    }
+
+    .footer{
+        font-size: 100%;
+        height: 30%;
+        
+    }
+
+    .subOpciones{
+        margin-top: 15%;
+        
+    }
+}
+
+@media (max-width: 680px) {
+    .titulo{
+        font-size: 600%;
+    }
+
+    .footer{
+        font-size: 100%;
+        height: 60%;
+        
+    }
+}
+
+@media (max-width: 510px) {
+    .titulo{
+        font-size: 400%;
+    }
+
+    .subOpciones{
+        margin-top: 25%;
+        
+    }
+
+    .footer{
+        font-size: 100%;
+        height: 90%;
+        
+    }
+
+    .enlaceMenu {
+        font-size: 2rem;
+        }
+}
+
+@media (max-width: 340px) {
+    .titulo{
+        font-size: 400%;
+    }
+
+    .subOpciones{
+        margin-top: 25%;
+        
+    }
+
+    .footer{
+        font-size: 100%;
+        height: 60%;
+        
+    }
+
+    .enlaceMenu {
+        font-size: 2rem;
+        }
+
+    .pageContainer {
+        overflow: scroll;
+        }
+}
+
+  

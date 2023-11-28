@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home{background-image: url("./assets/wallpaper/init.jpg");
+color: aliceblue;}
+
+.register{background-color: black;
+color: aliceblue;
+width: 100%;}
+
+.corredores{background-color: black;
+  color: aliceblue;
+  overflow-x: hidden;
+}
+
+.create{background-color: black;
+  color: aliceblue;
+  overflow-x: hidden;
+}
+
+.circuitos{background-color: black;
+  color: aliceblue;
+}
+
+.about{background-color: black;
+  color: aliceblue;
+}
